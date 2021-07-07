@@ -25,8 +25,6 @@ def pprint(data):
 # In[2]:
 
 
-params = json.loads("./job.json")
-pprint(params)
 # HARDCODED PARAMS
 DATA_FOLDER = "./data"
 RESULTS_FOLDER = "./results"
