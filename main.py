@@ -23,11 +23,12 @@ def pprint(data):
 
 
 # In[2]:
-
+job = json.load(open('./job.json',))
+RESULTS_FOLDER = job["resultFolder"]
+print(RESULTS_FOLDER)
 
 # HARDCODED PARAMS
 DATA_FOLDER = "./data"
-RESULTS_FOLDER = "./results"
 GRAPHML_FILE = "graphml/Chicago_Network.graphml"
 GRID_FILE = "grid/Chicago_Grid.shp"
 HOSPITAL_DATA = "hospital_data/Chicago_Hospital_Info.shp"

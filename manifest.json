@@ -2,7 +2,7 @@
 {
     "name": "COVID-19 spatial accessibility",
     "container": "python",
-    "setup_stage": "python {{JOB_EXECUTABLE_PATH}}/setup.py",
-    "execution_stage": "python {{JOB_EXECUTABLE_PATH}}/main.py",
-    "cleanup_stage": "python {{JOB_EXECUTABLE_PATH}}/cleanup.py"
+    "pre_processing_stage": "python setup.py",
+    "execution_stage": "python main.py",
+    "post_processing_stage": "python cleanup.py"
 }
