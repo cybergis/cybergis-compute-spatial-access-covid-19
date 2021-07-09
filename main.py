@@ -23,9 +23,10 @@ def pprint(data):
 
 
 # In[2]:
-job = json.load(open('./job.json',))
-RESULTS_FOLDER = job["resultFolder"]
-print(RESULTS_FOLDER)
+#job = json.load(open('./job.json',))
+#RESULTS_FOLDER = job["resultFolder"]
+RESULTS_FOLDER = "../result"
+#print(RESULTS_FOLDER)
 
 # HARDCODED PARAMS
 DATA_FOLDER = "./data"
@@ -67,7 +68,7 @@ assert os.path.exists(_population)
 # In[6]:
 
 
-G = ox.load_graphml(_graphml_file, node_type=str)
+G = ox.load_graphml(_graphml_file)
 grid_file = gpd.read_file(_grid_file)
 hospitals = gpd.read_file(_hospital_shapefile)
 pop_data = gpd.read_file(_population)
