@@ -1,7 +1,7 @@
  
 {
     "name": "COVID-19 spatial accessibility",
-    "container": "python",
+    "container": "cybergisx-0.4",
     "pre_processing_stage": "python setup.py",
     "execution_stage": "python main.py",
     "post_processing_stage": "python cleanup.py"
