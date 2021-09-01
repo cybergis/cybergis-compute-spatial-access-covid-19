@@ -23,10 +23,8 @@ def pprint(data):
 
 
 # In[2]:
-#job = json.load(open('./job.json',))
-#RESULTS_FOLDER = job["resultFolder"]
-RESULTS_FOLDER = "../result"
-#print(RESULTS_FOLDER)
+RESULTS_FOLDER = os.getenv('result_folder')
+print(RESULTS_FOLDER)
 
 # HARDCODED PARAMS
 DATA_FOLDER = "./data"
