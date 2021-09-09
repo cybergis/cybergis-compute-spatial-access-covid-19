@@ -13,4 +13,5 @@ conda init bash
 source ~/.bashrc
 # source conda env
 conda activate $CIGI_EB_ROOT/conda/cybergisx-py3-2021-08-13
-python $executable_folder/main.py
+ls
+python main.py
