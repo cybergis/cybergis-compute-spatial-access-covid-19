@@ -1,4 +1,5 @@
 #!/bin/bash
+MPLBACKEND=Agg 
 # source lmod
 source /etc/profile.d/z00_lmod.sh
 # path on keeling
@@ -12,4 +13,7 @@ conda init bash
 source ~/.bashrc
 # source conda env
 conda activate $CIGI_EB_ROOT/conda/cybergisx-py3-2021-08-13
-MPLBACKEND=Agg python main.py
+echo $executable_folder
+cd $executable_folder
+ls
+python main.py
