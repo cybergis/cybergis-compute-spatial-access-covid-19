@@ -66,7 +66,7 @@ assert os.path.exists(_population)
 # In[6]:
 
 
-G = ox.load_graphml(_graphml_file)
+G = ox.load_graphml(_graphml_file, folder="")
 grid_file = gpd.read_file(_grid_file)
 hospitals = gpd.read_file(_hospital_shapefile)
 pop_data = gpd.read_file(_population)
