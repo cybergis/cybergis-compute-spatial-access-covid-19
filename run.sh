@@ -8,8 +8,12 @@ export CIGI_EB_ROOT="/data/cigi/cybergisx-easybuild"
 module use $CIGI_EB_ROOT/easybuild/modules/all
 module use $CIGI_EB_ROOT/metamodules
 module load cybergisx
-# source conda env\
+# init conda
+conda init bash
+source ~/.bashrc
+# source conda env
+conda activate $CIGI_EB_ROOT/conda/cybergisx-py3-2021-08-13
 echo $executable_folder
 cd $executable_folder
 ls
-$CIGI_EB_ROOT/conda/cybergisx-py3-2021-08-13/bin/python main.py
+MPLBACKEND=Agg python main.py
