@@ -35,7 +35,7 @@ POPULATION_DATA = "pop_data/Chicago_Tract.shp"
 RESOURCE = "hospital_vents"
 POP_COLUMN = "Pop"
 POP_GEOID_COLUMN = "GEOID"
-PROCESSORS = 1
+PROCESSORS = 4
 
 
 # In[3]:
