@@ -2,7 +2,6 @@
 {
     "name": "COVID-19 spatial accessibility",
     "container": "cybergisx-0.4",
-    "pre_processing_stage": "python setup.py",
     "execution_stage": "MPLBACKEND=Agg python main.py",
-    "post_processing_stage": "python cleanup.py"
+    "require_upload_data": false
 }
