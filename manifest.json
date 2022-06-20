@@ -3,5 +3,21 @@
     "name": "COVID-19 spatial accessibility",
     "container": "cybergisx-0.4",
     "execution_stage": "MPLBACKEND=Agg python main.py",
+    "slurm_input_rules": {
+           "time": {
+                "max": 15,
+                "min": 5,
+                "default_value": 10,
+                "step": 1,
+                "unit": "Minutes"   
+            },
+            "memory_per_cpu": {
+                "max": 6,
+                "min": 4,
+                "default_value": 4,
+                "step": 1,
+                "unit": "GB"
+            }    
+    },
     "require_upload_data": false
 }
