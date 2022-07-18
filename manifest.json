@@ -1,8 +1,8 @@
  
 {
     "name": "COVID-19 spatial accessibility",
-    "description": "Calculates travel-time from hospitals and then calculates spatial accessibility to hospital beds for the entire state of Illinois. We calculate travel-time and aggregate spatial accessibility in parallel using 4 CPUs and about 64GB of memory. Read about the paper here: https://doi.org/10.1186/s12942-020-00229-x",
-    "estimated_runtime": "~15-20 minutes",
+    "description": "Calculates travel-time from hospitals and then calculates spatial accessibility to hospital beds for the entire state of Illinois. We calculate travel-time and aggregate spatial accessibility in parallel using 4 CPUs and about 64-80GB of memory. Read about the paper here: https://doi.org/10.1186/s12942-020-00229-x",
+    "estimated_runtime": "~20 minutes",
     "container": "cybergisx-0.4",
     "execution_stage": "MPLBACKEND=Agg python main.py",
     "slurm_input_rules": {
