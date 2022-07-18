@@ -13,7 +13,7 @@
                 "step": 1,
                 "unit": "Minutes"   
             },
-           "num_of_task": {
+           "cpu_per_task": {
                 "max": 4,
                 "min": 4,
                 "default_value": 4,
