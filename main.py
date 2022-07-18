@@ -15,6 +15,7 @@ import osmnx as ox
 import pandas as pd
 from shapely.geometry import Point, LineString, Polygon
 from tqdm import tqdm
+import zipfile
 
 warnings.filterwarnings("ignore")
 
@@ -28,14 +29,28 @@ print(RESULTS_FOLDER)
 
 # HARDCODED PARAMS
 DATA_FOLDER = "./data"
-GRAPHML_FILE = "graphml/Chicago_Network.graphml"
-GRID_FILE = "grid/Chicago_Grid.shp"
-HOSPITAL_DATA = "hospital_data/Chicago_Hospital_Info.shp"
-POPULATION_DATA = "pop_data/Chicago_Tract.shp"
 RESOURCE = "hospital_vents"
 POP_COLUMN = "Pop"
 POP_GEOID_COLUMN = "GEOID"
-PROCESSORS = 8
+PROCESSORS = 4
+
+
+# Chicago params
+# GRAPHML_FILE = "graphml/Chicago_Network.graphml"
+# GRID_FILE = "grid/Chicago_Grid.shp"
+# HOSPITAL_DATA = "hospital_data/Chicago_Hospital_Info.shp"
+# POPULATION_DATA = "pop_data/Chicago_Tract.shp"
+# Illinois:
+print(DATA_FOLDER)
+path_to_il_zip = os.path.join(DATA_FOLDER, "graphml/Illinois_Network.zip")
+path_extract_to = os.path.join(DATA_FOLDER, "graphml/")
+# unzip because this is too big
+with zipfile.ZipFile(path_to_il_zip, "r") as zip_ref:
+    zip_ref.extractall(path_extract_to)
+GRAPHML_FILE = "graphml/Illinois_Network.graphml"
+GRID_FILE = "grid/Illinois_Grid.shp"
+HOSPITAL_DATA = "hospital_data/Illinois_Hospital_Info.shp"
+POPULATION_DATA = "pop_data/Illinois_Tract.shp"
 
 
 # In[3]:
