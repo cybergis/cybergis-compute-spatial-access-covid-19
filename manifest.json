@@ -27,5 +27,7 @@
                 "unit": "GB"
             }    
     },
-    "require_upload_data": false
+    "require_upload_data": false,
+    "supported_hpc": ["keeling_community", "expanse_community", "anvil_community"],
+    "default_hpc": "expanse_community"
 }
